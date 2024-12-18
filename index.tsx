@@ -13,6 +13,16 @@ const App = () => {
   );
 };
 
+const Styles = {
+  fontSize16: {
+    fontSize: "16px",
+  },
+  fontSize20: {
+    fontSize: "20px",
+  }
+};
+
+
 // Navbar Component
 const Navbar = () => {
   return (
@@ -71,13 +81,13 @@ const About = () => {
         <div className="row gx-4 gx-lg-5 justify-content-center">
           <div className="col-lg-8">
             <h2 className="text-white mb-4">Profile</h2>
-            <p className="text-white mb-4">
-              <strong style={{ size: "0cap" }}>菊地(小池)亜紋</strong><br />
-              <strong style={{ size: "0cqw" }}>東京国際工科専門職大学/工科学部/情報工学科/AI戦略コース</strong><br />
-              <strong style={{ size: "0cqmax" }}>
-                長期インターンシップ：暗号資産積み立てアプリ。フロントエンドエンジニアを担当<br />
-                長期インターンシップ：需要予測LLMアプリ。AI開発エンジニアを担当
-              </strong>
+            <p className="text-white mb-4" styles={Styles.fontSize16}>
+              菊地(小池)亜紋
+              東京国際工科専門職大学/工科学部/情報工学科/AI戦略コース
+              
+              長期インターンシップ：暗号資産積み立てアプリ。フロントエンドエンジニアを担当
+              長期インターンシップ：需要予測LLMアプリ。AI開発エンジニアを担当
+              
             </p>
           </div>
         </div>
@@ -138,7 +148,7 @@ const ContactCard = ({ icon, title, content }) => {
 const Footer = () => {
   return (
     <footer className="footer bg-black small text-center text-white-50">
-      <div className="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div>
+      <div className="container px-4 px-lg-5">Copyright &copy; Your Website 2024</div>
     </footer>
   );
 };
