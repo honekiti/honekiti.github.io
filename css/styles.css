@@ -11238,6 +11238,41 @@ body {
   width: 100px;
 }
 
+#skill .card-wrapper {
+  width: 100%;
+}
+#skill .card {
+  flex-basis: 100%;
+}
+#skill .skill-icon {
+  flex-basis: 45px;
+}
+#skill .skill-icon img {
+  width: 45px;
+}
+#skill .skill-desc {
+  flex-basis: calc(100% - 45px - 10px);
+}
+#skill .rate {
+  height: 15px;
+  font-size: 15px;
+}
+#skill .rate:before, #skill .rate:after {
+  height: 15px;
+  line-height: 15px;
+}
+#skill .rate1:after {
+  width: 15px;
+}
+#skill .rate2:after {
+  width: 30px;
+}
+#skill .rate3:after {
+  width: 45px;
+}
+#skill .rate4:after {
+  width: 60px;
+}
 
 .projects-section {
   padding: 10rem 0;
