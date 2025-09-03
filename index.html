@@ -3,15 +3,16 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Amon Kikuchi - AI & Data Science Portfolio | Full-Stack Developer & Data Engineer" />
+        <meta name="author" content="Amon Kikuchi" />
         <title>Profile</title>
         <link rel="icon" type="image/x-icon" href="assets/icon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -20,12 +21,13 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top">Amon Kikuchi</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars"></i>
+                <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
+                <div class="navbar-nav" id="navbarResponsive">
+                    <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#skill">Skill</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -35,211 +37,311 @@
             </div>
         </nav>
         <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center" >
-                        <h1 class="text-white-50 mx-auto mt-2 mb-5">Amon Kikuchi Portofolio</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">菊地 亜紋</h2>
-                        <!-- <a class="btn btn-primary" href="#about">Get Started</a> -->
+        <header class="hero-section">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">AI・データサイエンススペシャリスト</div>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Amon Kikuchi</span>
+                        <span class="hero-subtitle">菊地 亜紋</span>
+                    </h1>
+                    <p class="hero-description">
+                        AI・機械学習に情熱を注ぐフルスタック開発者・データエンジニア。革新的なデジタルソリューションの創造を目指しています。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">プロジェクトを見る</a>
+                        <a href="#Contact" class="btn-secondary">お問い合わせ</a>
                     </div>
                 </div>
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-code"></i>
+                            <span>フルスタック</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-brain"></i>
+                            <span>AI・機械学習</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-database"></i>
+                            <span>データ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
             </div>
         </header>
         <!-- About-->
-        <section class="about-section text-lg-left" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="text-lg-left">
-                    <div class="text-white">
-                        <h2 class="text-center">About Me</h2>
-                        <h6></h6>
-                        <h4 class="text-center">
-                            菊地 亜紋<br>
-                            東京国際工科専門職大学　工科学部　情報工学科　AI戦略コース
-                        </h4>
-                        <h6>はじめまして! 平成14年生まれ22歳の菊地亜紋と申します。現在大学3年生です。大学の学部は情報系、専攻はAI系を専攻しております。主な学習内容としましては、データ分析, 機械学習, 深層学習などPythonをメインで学んでいます。</h5>
-                        <p>
-                        <h4 class="text-center">長期インターンシップ</h4>
-                        <h6>- 2024年1月～8月：株式会社AndGoにて長期インターンシップ(暗号資産(Bitcoin)の積み立てアプリ、フロントエンドエンジニアを担当),Typescript/node.js/React</h6>
-                        <h6></h6>
-                        <h6>2023年12月～2024年12月：株式会社セガサミーホールディングスにて長期インターンシップ(データ運用の効率化・自動化、データエンジニアを担当),Python/Docker</h6> 
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">革新的なソリューションを創造する情熱的な開発者</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-info">
+                        <div class="info-card profile-card">
+                            <div class="card-header">
+                                <i class="fas fa-user"></i>
+                                <h3>Profile</h3>
+                            </div>
+                            <div class="card-content">
+                                <h4>菊地 亜紋 (Amon Kikuchi)</h4>
+                                <p class="university">東京国際工科専門職大学 工科学部 情報工学科 AI戦略コース</p>
+                                <p class="bio">22歳、大学3年生。AI・機械学習を専攻し、データ分析、機械学習、深層学習を中心にPythonで学習を進めています。実践的な開発経験を通じて、フロントエンド・データエンジニアリングの両分野でスキルを磨いています。</p>
+                            </div>
+                        </div>
                         
-                        <p>
-                        <h4 class="text-center">ハッカソンHackathon</h4>
-                        <h6>- 株式会社サイバーエージェント：1DAY DATA HACKATHON、航空業界におけるデータコンサル、結果2位</h6>
-                    </div>
-                </div>
-                <!-- <img class="img-fluid" src="assets/img/ipad.png" alt="..." /> -->
-            </div>
-        </section>
-        <!-- skills-->
-        <section class="section" id="skill">
-            <div class="inner">
-              <div class="section-title-block row">
-                <h2 class="section-title text-center"><span class="section-title-css">SKILL</span></h2>
-                <p class="section-desc"></p>
-              </div>
-              <div class="card-wrapper">                               
-    
-                <div class="card">
-                  <div class="skill-desc">
-                    <h3 class="skill-desc-title"><i class="fas fa-desktop"></i>経験言語</h3>
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <th scope="col">技術</th>
-                          <th scope="col">経験年数</th>
-                          <th scope="col">スキル</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Python</th>
-                          <td >3年</th>
-                          <td><span class="rating"><p class="rate rate4"></p></span></td>
-                        </tr>
-                        <tr>
-                        <tr>
-                          <th scope="row">Typescript</th>
-                          <td>8か月</td>
-                          <td><span class="rating"><p class="rate rate3"></p></span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">HTML5</th>
-                          <td>2か月</td>
-                          <td><span class="rating"><p class="rate rate2"></p></span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">CSS3</th>
-                          <td >2か月</th>
-                          <td><span class="rating"><p class="rate rate1"></p></span></td>
-                        </tr>                        
-                          <th scope="row">C</th>
-                          <td >3か月</th>
-                          <td><span class="rating"><p class="rate rate1"></p></span></td>
-                        </tr>
-                        </tr>                        
-                          <th scope="row">node.js</th>
-                          <td >8か月</th>
-                          <td><span class="rating"><p class="rate rate1"></p></span></td>
-                        </tr>                           
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-    
-                <div class="card">
-                  <div class="skill-desc">
-                    <h3 class="skill-desc-title"><i class="fas fa-toolbox"></i>その他</h3>
-                    <p>開発等で使用したツールやFWです。</p>
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <th scope="col">技術</th>
-                          <th scope="col">経験年数</th>
-                          <th scope="col">スキル</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">Slack</th>
-                          <td>3年</td>
-                          <td><span class="rating"><p class="rate rate4"></p></span></td>
-                        </tr>                        
-                        <tr>
-                          <th scope="row">Git</th>
-                          <td>1年</td>
-                          <td><span class="rating"><p class="rate rate3"></p></span></td>
-                        </tr>                      
-                        <tr>
-                          <th scope="row">Notion</th>
-                          <td>半年</td>
-                          <td><span class="rating"><p class="rate rate3"></p></span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Qiita</th>
-                          <td>2か月</td>
-                          <td><span class="rating"><p class="rate rate1"></p></span></td>
-                        </tr>  
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-    
-                <div class="card">
-                  <div class="skill-desc">
-                    <h3 class="skill-desc-title"><i class="fas fa-list-alt"></i>保有資格</h3>
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <th scope="col">資格</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">基本情報技術者</th>
-                        </tr>
-                        <tr>
-                          <th scope="row">情報技術者検定2級</th>
-                        </tr>
-                        <tr>
-                          <th scope="row">計算技術検定2級</th>
-                        </tr>
-                        <tr>
-                          <th scope="row">Toeic 710</th>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-    
-                </div>
-              </div>
-            </div>
-          </section>
-            
-        <!-- Projects-->
-        <section class="projects-section bg-light" id="projects">
-            <div class="row gx-4 gx-lg-5">
-                <h1 class=" text-center">Projects</h1>
-                <h3 class=" text-center">(Click on the image)</h3>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <button class="btn" style="width: 100%; height: 70%;" onclick="window.location.href='https://github.com/honekiti/honekiti.github.io'">
-                                <img class="img-fluid" src="assets/img/myportofolio.png" style="width: 100%; height: 100%;" />
-                            </button>
-                            <hr class="my-4" />
-                            <div class="small">
-                                github of My Portofolio<br>
-                                html5/css3/js
+                        <div class="info-card experience-card">
+                            <div class="card-header">
+                                <i class="fas fa-briefcase"></i>
+                                <h3>経歴・実績</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="experience-item">
+                                    <div class="experience-period">2025年1月～現在</div>
+                                    <div class="experience-details">
+                                        <h4>株式会社AVILEN - DS-Hub</h4>
+                                        <p class="role">AI・機械学習エンジニア インターン</p>
+                                        <p class="description">クライアント案件におけるAIモデル開発やアノテーション業務を担当</p>
+                                        <div class="tech-stack">
+                                            <span class="tech">Python</span>
+                                            <span class="tech">機械学習</span>
+                                            <span class="tech">データアノテーション</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item">
+                                    <div class="experience-period">2024年1月～8月</div>
+                                    <div class="experience-details">
+                                        <h4>株式会社AndGo</h4>
+                                        <p class="role">フロントエンドエンジニア インターン</p>
+                                        <p class="description">暗号資産(Bitcoin)の積み立てアプリ開発</p>
+                                        <div class="tech-stack">
+                                            <span class="tech">TypeScript</span>
+                                            <span class="tech">Node.js</span>
+                                            <span class="tech">React</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item">
+                                    <div class="experience-period">2023年12月～2024年12月</div>
+                                    <div class="experience-details">
+                                        <h4>株式会社セガサミーホールディングス</h4>
+                                        <p class="role">データエンジニア インターン</p>
+                                        <p class="description">データ運用の効率化・自動化</p>
+                                        <div class="tech-stack">
+                                            <span class="tech">Python</span>
+                                            <span class="tech">Docker</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="experience-item achievement-highlight">
+                                    <div class="experience-period">2024年</div>
+                                    <div class="experience-details">
+                                        <h4>株式会社サイバーエージェント ハッカソン</h4>
+                                        <p class="role">1DAY DATA HACKATHON</p>
+                                        <p class="description">航空業界におけるデータコンサルティング</p>
+                                        <div class="achievement-badge">
+                                            <i class="fas fa-medal"></i>
+                                            <span>2位入賞</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                  <div class="card py-4 h-100">
-                      <div class="card-body text-center">
-                          <button class="btn" style="width: 100%; height: 70%;" onclick="window.location.href='https://github.com/honekiti/andgo'">
-                              <img class="img-fluid" src="assets/img/BTC_img.jpg" style="width: 100%; height: 100%;" />
-                          </button>
-                          <hr class="my-4" />
-                          <div class="small">
-                              github of 暗号資産の積み立てApp<br>
-                              Typescript/node.js/React
-                          </div>
-                      </div>
-                  </div>
+            </div>
+        </section>
+        <!-- Skills-->
+        <section class="skills-section" id="skill">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">スキル・専門分野</h2>
+                    <p class="section-subtitle">習得した技術スキルと使用ツール</p>
                 </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="card py-4 h-100">
-                        <div class="card-body text-center">
-                            <button class="btn" style="width: 100%; height: 70%;" onclick="window.location.href='https://udify.app/chat/fBAdf6CBo7HTTWHE';">
-                                <img class="img-fluid" src="assets/img/finance.jpg" style="width: 100%; height: 100%;" />
-                            </button>
-                            <hr class="my-4" />
-                            <div class="small">
-                                株式レポートChatbot App<br>
-                                Python/Dify
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>プログラミング言語</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-experience">3年</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TypeScript</span>
+                                    <span class="skill-experience">8か月</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="75"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-experience">8か月</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="70"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5/CSS3</span>
+                                    <span class="skill-experience">2か月</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="60"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">C</span>
+                                    <span class="skill-experience">3か月</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-level="50"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>ツール・技術</h3>
+                        </div>
+                        <div class="tech-tags">
+                            <span class="tech-tag react">React</span>
+                            <span class="tech-tag docker">Docker</span>
+                            <span class="tech-tag git">Git</span>
+                            <span class="tech-tag slack">Slack</span>
+                            <span class="tech-tag notion">Notion</span>
+                            <span class="tech-tag qiita">Qiita</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-certificate"></i>
+                            <h3>保有資格</h3>
+                        </div>
+                        <div class="certifications-list">
+                            <div class="cert-item">
+                                <i class="fas fa-medal"></i>
+                                <span>基本情報技術者</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-medal"></i>
+                                <span>情報技術者検定2級</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-medal"></i>
+                                <span>計算技術検定2級</span>
+                            </div>
+                            <div class="cert-item">
+                                <i class="fas fa-globe"></i>
+                                <span>TOEIC 710</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <!-- Projects-->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">主要プロジェクト</h2>
+                    <p class="section-subtitle">最近の作品と貢献の紹介</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-image">
+                            <img src="assets/img/myportofolio.png" alt="Portfolio Website">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/honekiti/honekiti.github.io" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>コードを見る</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">ポートフォリオサイト</h3>
+                            <p class="project-description">個人ポートフォリオサイトの設計・開発。レスポンシブデザインでモダンなUI/UXを実現。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <img src="assets/img/BTC_img.jpg" alt="Bitcoin Investment App">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/honekiti/andgo" class="project-link" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                        <span>コードを見る</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">暗号資産投資アプリ</h3>
+                            <p class="project-description">Bitcoin自動積み立てアプリのフロントエンド開発。ユーザーフレンドリーなUIで投資体験を最適化。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">TypeScript</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="project-image">
+                            <img src="assets/img/finance.jpg" alt="Stock Report Chatbot">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://udify.app/chat/fBAdf6CBo7HTTWHE" class="project-link" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>デモを見る</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">株式レポートチャットボット</h3>
+                            <p class="project-description">株式レポート分析チャットボット。AIを活用した金融情報の自動分析とレポート生成。</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Dify</span>
+                                <span class="tech-tag">AI/ML</span>
                             </div>
                         </div>
                     </div>
@@ -249,57 +351,121 @@
         <!-- Signup-->
         
         <!-- Contact-->
-        <section class="contact-section bg-black" id="Contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Address</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">静岡県沼津市上香貫三園町1389 VillaScala304</div>
+        <section class="contact-section" id="Contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <p class="section-subtitle">Let's connect and create something amazing together</p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>所在地</h3>
+                                <p>静岡県沼津市<br>VillaScala304</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>メール</h3>
+                                <a href="mailto:amon20021121@gmail.com">amon20021121@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>電話番号</h3>
+                                <a href="tel:+819041100442">090-4110-0442</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">amon20021121@gmail.com</a></div>
+                    
+                    <div class="contact-form-container" data-aos="fade-left" data-aos-delay="400">
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" placeholder="お名前" required>
+                                <label for="name">お名前</label>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Phone</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">090-4110-0442</div>
+                            <div class="form-group">
+                                <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                                <label for="email">メールアドレス</label>
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" placeholder="件名" required>
+                                <label for="subject">件名</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" rows="5" placeholder="メッセージ" required></textarea>
+                                <label for="message">メッセージ</label>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <span>メッセージを送信</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
-                <div class="social d-flex justify-content-center">
-                    <!-- <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a> -->
-                    <a class="mx-2" href="https://github.com/honekiti/honekiti.github.io"><i class="fab fa-github"></i></a>
+                
+                <div class="social-links" data-aos="fade-up" data-aos-delay="500">
+                    <h3>SNS・連絡先</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/honekiti" class="social-icon" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:amon20021121@gmail.com" class="social-icon">
+                            <i class="fas fa-envelope"></i>
+                            <span>メール</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Amon Koike 2024</div></footer>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <h3>Amon Kikuchi</h3>
+                        <p>AI・データサイエンススペシャリスト</p>
+                    </div>
+                    <div class="footer-center">
+                        <nav class="footer-nav">
+                            <a href="#about">About</a>
+                            <a href="#skill">スキル</a>
+                            <a href="#projects">プロジェクト</a>
+                            <a href="#Contact">お問い合わせ</a>
+                        </nav>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-social">
+                            <a href="https://github.com/honekiti" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="mailto:amon20021121@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Amon Kikuchi. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
         <!-- Bootstrap core JS-->
+        <!-- AOS Animation Library -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
