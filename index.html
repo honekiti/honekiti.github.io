@@ -55,7 +55,7 @@
                     <div class="floating-elements">
                         <div class="floating-card card-1">
                             <i class="fas fa-code"></i>
-                            <span>フルスタック</span>
+                            <span>強化学習</span>
                         </div>
                         <div class="floating-card card-2">
                             <i class="fas fa-brain"></i>
@@ -89,7 +89,21 @@
                             <div class="card-content">
                                 <h4>菊地 亜紋 (Amon Kikuchi)</h4>
                                 <p class="university">東京国際工科専門職大学 工科学部 情報工学科 AI戦略コース</p>
-                                <p class="bio">22歳、大学3年生。AI・機械学習を専攻し、データ分析、機械学習、深層学習を中心にPythonで学習を進めています。実践的な開発経験を通じて、フロントエンド・データエンジニアリングの両分野でスキルを磨いています。</p>
+                                <p class="bio">大学4年生。AI・機械学習を専攻し、データ分析、機械学習、深層学習を中心にPythonで学習を進めています。</p>
+                                <div class="research-field">
+                                    <h5 class="research-title"><i class="fas fa-flask"></i> 研究分野</h5>
+                                    <p class="research-description">
+                                        <strong>強化学習トレーディングシステム</strong>の研究に取り組んでいます。
+                                        金融市場における自動売買アルゴリズムの開発を通じて、深層強化学習（Deep Q-Network、Actor-Critic手法）を応用した投資戦略の最適化を行っています。
+                                        リスク管理とポートフォリオ最適化を組み合わせた実用的なトレーディングボットの構築を目指しています。
+                                    </p>
+                                    <div class="research-tags">
+                                        <span class="research-tag">強化学習</span>
+                                        <span class="research-tag">金融工学</span>
+                                        <span class="research-tag">アルゴリズム取引</span>
+                                        <span class="research-tag">深層学習</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         
@@ -114,6 +128,19 @@
                                 </div>
                                 
                                 <div class="experience-item">
+                                    <div class="experience-period">2024年9月～2024年12月</div>
+                                    <div class="experience-details">
+                                        <h4>株式会社セガサミーホールディングス</h4>
+                                        <p class="role">データエンジニア インターン</p>
+                                        <p class="description">ゲームユーザーのSNS・アプリレビューを多言語で収集し、生成AIによる要約を通じて意見を可視化・集約する仕組みを構築</p>
+                                        <div class="tech-stack">
+                                            <span class="tech">Python</span>
+                                            <span class="tech">Docker</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="experience-item">
                                     <div class="experience-period">2024年1月～8月</div>
                                     <div class="experience-details">
                                         <h4>株式会社AndGo</h4>
@@ -123,19 +150,6 @@
                                             <span class="tech">TypeScript</span>
                                             <span class="tech">Node.js</span>
                                             <span class="tech">React</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <div class="experience-item">
-                                    <div class="experience-period">2023年12月～2024年12月</div>
-                                    <div class="experience-details">
-                                        <h4>株式会社セガサミーホールディングス</h4>
-                                        <p class="role">データエンジニア インターン</p>
-                                        <p class="description">データ運用の効率化・自動化</p>
-                                        <div class="tech-stack">
-                                            <span class="tech">Python</span>
-                                            <span class="tech">Docker</span>
                                         </div>
                                     </div>
                                 </div>
@@ -257,6 +271,55 @@
                             <div class="cert-item">
                                 <i class="fas fa-globe"></i>
                                 <span>TOEIC 805</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 個人LLM チャットボット -->
+                <div class="chatbot-section">
+                    <div class="section-header">
+                        <h3 class="section-title-small">AmonBot - 私について聞いてください</h3>
+                        <p class="section-subtitle-small">AI チャットボットが私について詳しくお答えします</p>
+                    </div>
+                    
+                    <div class="chatbot-container">
+                        <div class="chatbot-window" id="chatbotWindow">
+                            <div class="chatbot-header">
+                                <div class="chatbot-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="chatbot-info">
+                                    <h4>AmonBot</h4>
+                                    <span class="status-indicator"></span>
+                                    <span class="status-text">オンライン</span>
+                                </div>
+                            </div>
+                            
+                            <div class="chatbot-messages" id="chatbotMessages">
+                                <div class="bot-message">
+                                    <div class="message-avatar">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <div class="message-content">
+                                        <p>こんにちは！私は菊地亜紋について答えるAIアシスタントです。🤖<br>経歴、スキル、プロジェクト、趣味など、何でもお聞きください！</p>
+                                        <span class="message-time">今</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="quick-questions">
+                                <button class="quick-btn" data-question="あなたの専門分野は何ですか？">💻 専門分野</button>
+                                <button class="quick-btn" data-question="強化学習トレーディングシステムの研究について教えて">🔬 研究分野</button>
+                                <button class="quick-btn" data-question="どんなプロジェクトを手がけていますか？">🚀 プロジェクト</button>
+                                <button class="quick-btn" data-question="インターンシップの経験を教えてください">💼 インターン経験</button>
+                            </div>
+                            
+                            <div class="chatbot-input-group">
+                                <input type="text" id="chatInput" placeholder="メッセージを入力..." maxlength="200">
+                                <button type="button" id="sendMessage">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
                             </div>
                         </div>
                     </div>

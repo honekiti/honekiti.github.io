@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScrolling();
     initializeTypingEffect();
     initializeParallaxEffect();
+    initializeChatbot();
     
     // Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
@@ -461,6 +462,242 @@ rainbowStyle.textContent = `
     }
 `;
 document.head.appendChild(rainbowStyle);
+
+// ===== CHATBOT FUNCTIONALITY =====
+function initializeChatbot() {
+    const chatInput = document.getElementById('chatInput');
+    const sendButton = document.getElementById('sendMessage');
+    const messagesContainer = document.getElementById('chatbotMessages');
+    const quickButtons = document.querySelectorAll('.quick-btn');
+    
+    // 個人情報データベース
+    const personalData = {
+        basic: {
+            name: "菊地亜紋",
+            nameEn: "Amon Kikuchi",
+            age: 22,
+            university: "東京国際工科専門職大学 工科学部 情報工学科 AI戦略コース",
+            year: "大学4年生",
+            location: "静岡県沼津市",
+            research: "強化学習トレーディングシステム"
+        },
+        research: {
+            field: "強化学習トレーディングシステム",
+            description: "金融市場における自動売買アルゴリズムの開発を通じて、深層強化学習（Deep Q-Network、Actor-Critic手法）を応用した投資戦略の最適化を行っています。リスク管理とポートフォリオ最適化を組み合わせた実用的なトレーディングボットの構築を目指しています。",
+            keywords: ["強化学習", "金融工学", "アルゴリズム取引", "深層学習", "DQN", "Actor-Critic", "リスク管理", "ポートフォリオ最適化"]
+        },
+        skills: {
+            languages: ["Python", "TypeScript", "JavaScript", "HTML5", "CSS3", "C", "Node.js"],
+            tools: ["React", "Docker", "Git", "Slack", "Notion", "機械学習", "深層学習", "データ分析"],
+            certifications: ["基本情報技術者", "情報技術者検定2級", "計算技術検定2級", "TOEIC 805"]
+        },
+        experience: [
+            {
+                period: "2025年1月～現在",
+                company: "株式会社AVILEN - DS-Hub",
+                role: "AI・機械学習エンジニア インターン",
+                description: "クライアント案件におけるAIモデル開発やアノテーション業務を担当",
+                tech: ["Python", "機械学習", "データアノテーション"]
+            },
+            {
+                period: "2024年1月～8月",
+                company: "株式会社AndGo",
+                role: "フロントエンドエンジニア インターン",
+                description: "暗号資産(Bitcoin)の積み立てアプリ開発",
+                tech: ["TypeScript", "Node.js", "React"]
+            },
+            {
+                period: "2023年12月～2024年12月",
+                company: "株式会社セガサミーホールディングス",
+                role: "データエンジニア インターン",
+                description: "データ運用の効率化・自動化",
+                tech: ["Python", "Docker"]
+            }
+        ],
+        projects: [
+            {
+                name: "ポートフォリオサイト",
+                description: "個人ポートフォリオサイトの設計・開発。レスポンシブデザインでモダンなUI/UXを実現",
+                tech: ["HTML5", "CSS3", "JavaScript"]
+            },
+            {
+                name: "暗号資産投資アプリ",
+                description: "Bitcoin自動積み立てアプリのフロントエンド開発。ユーザーフレンドリーなUIで投資体験を最適化",
+                tech: ["TypeScript", "React", "Node.js"]
+            },
+            {
+                name: "株式レポートチャットボット",
+                description: "株式レポート分析チャットボット。AIを活用した金融情報の自動分析とレポート生成",
+                tech: ["Python", "Dify", "AI/ML"]
+            }
+        ],
+        achievements: [
+            {
+                event: "株式会社サイバーエージェント ハッカソン",
+                name: "1DAY DATA HACKATHON",
+                description: "航空業界におけるデータコンサルティング",
+                result: "2位入賞"
+            }
+        ]
+    };
+    
+    // AIレスポンス生成関数
+    function generateResponse(question) {
+        const q = question.toLowerCase();
+        
+        // 専門分野について
+        if (q.includes('専門') || q.includes('分野') || q.includes('得意')) {
+            return `私の専門分野はAI・機械学習です！🤖\n\n主に以下の分野に取り組んでいます：\n• データ分析・データサイエンス\n• 機械学習・深層学習\n• フロントエンド開発\n• データエンジニアリング\n\n**研究分野：**\n${personalData.research.field}の研究に特に力を入れています。${personalData.research.description}\n\nPythonを中心に、TypeScript/React、Dockerなども使って開発しています。現在は${personalData.basic.university}でAI戦略コースを専攻中です！`;
+        }
+        
+        // 研究について
+        if (q.includes('研究') || q.includes('強化学習') || q.includes('トレーディング') || q.includes('金融')) {
+            return `研究分野についてご紹介します！🔬\n\n**${personalData.research.field}**\n\n${personalData.research.description}\n\n**キーワード：**\n${personalData.research.keywords.join(', ')}\n\nこの研究を通じて、AIと金融の融合領域で実用的なソリューションの開発を目指しています！`;
+        }
+        
+        // プロジェクトについて
+        if (q.includes('プロジェクト') || q.includes('作品') || q.includes('開発')) {
+            let response = "これまでに手がけたプロジェクトをご紹介します！🚀\n\n";
+            personalData.projects.forEach((project, index) => {
+                response += `${index + 1}. **${project.name}**\n${project.description}\n技術: ${project.tech.join(', ')}\n\n`;
+            });
+            return response;
+        }
+        
+        // インターンシップ経験
+        if (q.includes('インターン') || q.includes('経験') || q.includes('職歴') || q.includes('仕事')) {
+            let response = "インターンシップ経験をご紹介します！💼\n\n";
+            personalData.experience.forEach((exp, index) => {
+                response += `${index + 1}. **${exp.company}** (${exp.period})\n役職: ${exp.role}\n内容: ${exp.description}\n技術: ${exp.tech.join(', ')}\n\n`;
+            });
+            return response;
+        }
+        
+        // 技術スキル
+        if (q.includes('技術') || q.includes('スキル') || q.includes('言語') || q.includes('ツール')) {
+            return `技術スキルをご紹介します！⚡\n\n**プログラミング言語:**\n${personalData.skills.languages.join(', ')}\n\n**ツール・フレームワーク:**\n${personalData.skills.tools.join(', ')}\n\n**保有資格:**\n${personalData.skills.certifications.join(', ')}\n\n特にPythonでの機械学習とTypeScript/Reactでのフロントエンド開発が得意です！`;
+        }
+        
+        // 基本情報
+        if (q.includes('名前') || q.includes('年齢') || q.includes('大学') || q.includes('プロフィール')) {
+            return `プロフィールをご紹介します！👨‍💻\n\n**名前:** ${personalData.basic.name} (${personalData.basic.nameEn})\n**年齢:** ${personalData.basic.age}歳\n**学年:** ${personalData.basic.year}\n**大学:** ${personalData.basic.university}\n**研究分野:** ${personalData.basic.research}\n**居住地:** ${personalData.basic.location}\n\nAI・データサイエンス分野に情熱を注ぐ学生エンジニアです！特に強化学習を用いた金融システムの研究に取り組んでいます。`;
+        }
+        
+        // 実績・成果
+        if (q.includes('実績') || q.includes('成果') || q.includes('受賞') || q.includes('ハッカソン')) {
+            let response = "主な実績をご紹介します！🏆\n\n";
+            personalData.achievements.forEach((achievement, index) => {
+                response += `${index + 1}. **${achievement.event}**\nイベント: ${achievement.name}\n内容: ${achievement.description}\n結果: ${achievement.result}\n\n`;
+            });
+            return response;
+        }
+        
+        // 連絡先
+        if (q.includes('連絡') || q.includes('メール') || q.includes('電話') || q.includes('コンタクト')) {
+            return `お気軽にご連絡ください！📧\n\n**メール:** amon20021121@gmail.com\n**電話:** 090-4110-0442\n**GitHub:** https://github.com/honekiti\n**所在地:** ${personalData.basic.location}\n\nお問い合わせお待ちしております！`;
+        }
+        
+        // デフォルトレスポンス
+        const responses = [
+            `すみません、その質問についてはよくわからないです😅\n\n以下のような質問にお答えできます：\n• 専門分野について\n• プロジェクトについて\n• インターンシップ経験\n• 技術スキル\n• プロフィール情報\n• 実績・成果\n\nお気軽にお聞きください！`,
+            `もう少し具体的に教えていただけますか？🤔\n\n私について以下のようなことをお答えできます：\n• 経歴・学歴\n• 技術的なスキル\n• 開発プロジェクト\n• インターンシップ体験\n\nどんなことが知りたいですか？`
+        ];
+        return responses[Math.floor(Math.random() * responses.length)];
+    }
+    
+    // メッセージ送信関数
+    function sendMessage(message) {
+        if (!message.trim()) return;
+        
+        // ユーザーメッセージを追加
+        addMessage(message, 'user');
+        
+        // 送信ボタンを無効化
+        sendButton.disabled = true;
+        sendButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        
+        // タイピングインジケーターを表示
+        showTypingIndicator();
+        
+        // AIレスポンスを生成（少し遅延を追加してリアルな感じに）
+        setTimeout(() => {
+            hideTypingIndicator();
+            const response = generateResponse(message);
+            addMessage(response, 'bot');
+            
+            // 送信ボタンを再有効化
+            sendButton.disabled = false;
+            sendButton.innerHTML = '<i class="fas fa-paper-plane"></i>';
+        }, 1000 + Math.random() * 1500);
+        
+        // 入力をクリア
+        chatInput.value = '';
+    }
+    
+    // メッセージ追加関数
+    function addMessage(text, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `${type}-message`;
+        
+        const time = new Date().toLocaleTimeString('ja-JP', { hour: '2-digit', minute: '2-digit' });
+        const avatar = type === 'bot' ? '<i class="fas fa-robot"></i>' : '<i class="fas fa-user"></i>';
+        
+        messageDiv.innerHTML = `
+            <div class="message-avatar">${avatar}</div>
+            <div class="message-content">
+                <p>${text.replace(/\n/g, '<br>')}</p>
+                <span class="message-time">${time}</span>
+            </div>
+        `;
+        
+        messagesContainer.appendChild(messageDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    // タイピングインジケーター
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'bot-message typing-message';
+        typingDiv.innerHTML = `
+            <div class="message-avatar"><i class="fas fa-robot"></i></div>
+            <div class="message-content">
+                <div class="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+        `;
+        messagesContainer.appendChild(typingDiv);
+        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+    }
+    
+    function hideTypingIndicator() {
+        const typingMessage = messagesContainer.querySelector('.typing-message');
+        if (typingMessage) {
+            typingMessage.remove();
+        }
+    }
+    
+    // イベントリスナー
+    sendButton?.addEventListener('click', () => {
+        sendMessage(chatInput.value);
+    });
+    
+    chatInput?.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage(chatInput.value);
+        }
+    });
+    
+    // クイック質問ボタン
+    quickButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const question = btn.getAttribute('data-question');
+            sendMessage(question);
+        });
+    });
+}
 
 // ===== LOADING ANIMATION =====
 window.addEventListener('load', function() {
