@@ -484,7 +484,7 @@ section {
 .about-info {
   display: grid;
   /* 2カラム構成に調整（左：プロフィール、右：経歴） */
-  grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
+  grid-template-columns: minmax(320px, 1.3fr) minmax(0, 1.7fr);
   gap: var(--spacing-2xl);
 }
 
